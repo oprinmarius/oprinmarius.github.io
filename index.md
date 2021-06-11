@@ -1,37 +1,35 @@
-## Welcome to GitHub Pages
+### Hi there 👋
+<!-- Actual text -->
 
-You can use the [editor on GitHub](https://github.com/oprinmarius/oprinmarius.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+You can find me on [![Twitter][1.2]][1], or on [![LinkedIn][2.2]][2].
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<!-- Icons -->
 
-### Markdown
+[1.2]: http://i.imgur.com/wWzX9uB.png (twitter icon without padding)
+[2.2]: https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/linkedin-3-16.png (LinkedIn icon without padding)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<!-- Links to your social media accounts -->
 
-```markdown
-Syntax highlighted code block
+[1]: https://twitter.com/oprinmarius
+[2]: https://www.linkedin.com/in/marius-oprin-3834a750/
 
-# Header 1
-## Header 2
-### Header 3
+![oprinmarius's GitHub stats](https://github-readme-stats.vercel.app/api?username=oprinmarius&show_icons=true&theme=gotham)
 
-- Bulleted
-- List
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=oprinmarius&theme=gotham&count_private=true&layout=compact)
 
-1. Numbered
-2. List
+![](https://visitor-badge.laobi.icu/badge?page_id=oprinmarius)
 
-**Bold** and _Italic_ and `Code` text
+<!--
+**oprinmarius/oprinmarius** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-[Link](url) and ![Image](src)
-```
+Here are some ideas to get you started:
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/oprinmarius/oprinmarius.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- 🔭 I’m currently working on ...
+- 🌱 I’m currently learning ...
+- 👯 I’m looking to collaborate on ...
+- 🤔 I’m looking for help with ...
+- 💬 Ask me about ...
+- 📫 How to reach me: ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
+-->
