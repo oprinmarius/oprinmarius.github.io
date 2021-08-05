@@ -7,8 +7,8 @@ You can find me on [![Twitter][1.2]][1], or on [![LinkedIn][2.2]][2].
 📫 How to reach me: [marius@oprin.ro](mailto:marius@oprin.ro)
 <!-- Icons -->
 
-[1.2]: https://raw.githubusercontent.com/oprinmarius/oprinmarius.github.io/main/images/wWzX9uB.png
-[2.2]: https://raw.githubusercontent.com/oprinmarius/oprinmarius.github.io/main/images/linkedin-3-16.png
+[1.2]: https://raw.githubusercontent.com/oprinmarius/oprinmarius.github.io/main/assets/images/wWzX9uB.png
+[2.2]: https://raw.githubusercontent.com/oprinmarius/oprinmarius.github.io/main/assets/images/linkedin-3-16.png
 
 <!-- Links to your social media accounts -->
 
