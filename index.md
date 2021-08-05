@@ -15,9 +15,9 @@ You can find me on [![Twitter][1.2]][1], or on [![LinkedIn][2.2]][2].
 [1]: https://twitter.com/oprinmarius
 [2]: https://www.linkedin.com/in/marius-oprin-3834a750/
 
-![oprinmarius's GitHub stats](https://github-readme-stats.vercel.app/api?username=oprinmarius&show_icons=true&theme=hacker)
+![oprinmarius's GitHub stats](https://github-readme-stats.vercel.app/api?username=oprinmarius&show_icons=true&theme=architect)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=oprinmarius&theme=hacker&count_private=true&layout=compact)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=oprinmarius&theme=architect&count_private=true&layout=compact)
 
 ![](https://visitor-badge.laobi.icu/badge?page_id=oprinmarius)
 
