@@ -1,13 +1,5 @@
 @import "{{ site.theme }}";
 
-footer {
-  display: none !important;
-}
-
-.btn {
-  display: none !important;
-}
-
 sidebar {
   display: none !important;
 }
