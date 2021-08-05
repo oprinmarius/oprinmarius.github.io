@@ -1,12 +1,12 @@
 ### Hi there 👋
 <!-- Actual text -->
 
-You can find me on [![Twitter][1.2]][1], or on [![LinkedIn][2.2]][2].
+You can find me on [![Twitter][1.2]][1], or on [![LinkedIn][2.2]][2] .
 
 <!-- Icons -->
 
-[1.2]: https://github.com/oprinmarius/oprinmarius.github.io/raw/main/images/wWzX9uB.png (twitter icon without padding)
-[2.2]: https://github.com/oprinmarius/oprinmarius.github.io/raw/main/images/linkedin-3-16.png (LinkedIn icon)
+[1.2]: https://raw.githubusercontent.com/oprinmarius/oprinmarius.github.io/main/images/wWzX9uB.png (twitter icon without padding)
+[2.2]: https://raw.githubusercontent.com/oprinmarius/oprinmarius.github.io/main/images/linkedin-3-16.png (LinkedIn icon)
 
 <!-- Links to your social media accounts -->
 
