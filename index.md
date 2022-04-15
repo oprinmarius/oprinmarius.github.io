@@ -7,19 +7,20 @@ You can find me on [![Twitter][1.2]][1], or on [![LinkedIn][2.2]][2].
 📫 How to reach me: [marius@oprin.ro](mailto:marius@oprin.ro)
 
 🔭 [Aquire DevOps Services](https://buy.stripe.com/6oE5kNa8kaFQ18c5kk)
+[![CloudNative][3.2]][3]
 <!-- Icons -->
 
 [1.2]: https://raw.githubusercontent.com/oprinmarius/oprinmarius.github.io/main/assets/images/wWzX9uB.png
 [2.2]: https://raw.githubusercontent.com/oprinmarius/oprinmarius.github.io/main/assets/images/linkedin-3-16.png
+[3.2]: https://raw.githubusercontent.com/oprinmarius/oprinmarius.github.io/main/assets/images/k8s-logo.png
 
 <!-- Links to your social media accounts -->
 
 [1]: https://twitter.com/oprinmarius
 [2]: https://www.linkedin.com/in/marius-oprin-3834a750/
+[3]: https://buy.stripe.com/6oE5kNa8kaFQ18c5kk
 
-![oprinmarius's GitHub stats](https://github-readme-stats.vercel.app/api?username=oprinmarius&show_icons=true&theme=architect)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=oprinmarius&theme=architect&count_private=true&layout=compact)
+![oprinmarius's GitHub stats](https://github-readme-stats.vercel.app/api?username=oprinmarius&show_icons=true&theme=architect) ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=oprinmarius&theme=architect&count_private=true&layout=compact)
 
 ![](https://visitor-badge.laobi.icu/badge?page_id=oprinmarius)
 
