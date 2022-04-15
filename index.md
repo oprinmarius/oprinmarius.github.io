@@ -5,6 +5,8 @@
 You can find me on [![Twitter][1.2]][1], or on [![LinkedIn][2.2]][2].
 
 📫 How to reach me: [marius@oprin.ro](mailto:marius@oprin.ro)
+
+![Aquire DevOps Services](https://buy.stripe.com/6oE5kNa8kaFQ18c5kk)
 <!-- Icons -->
 
 [1.2]: https://raw.githubusercontent.com/oprinmarius/oprinmarius.github.io/main/assets/images/wWzX9uB.png
