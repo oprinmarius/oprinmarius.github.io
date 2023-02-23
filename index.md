@@ -29,7 +29,7 @@ You can find me on [![Twitter][1.2]][1], or on [![LinkedIn][2.2]][2].
 [3]: https://buy.stripe.com/6oE5kNa8kaFQ18c5kk
 [4]: https://buy.stripe.com/00g14xgwIcNY5osdQT
 
-![oprinmarius's GitHub stats](https://github-readme-stats.vercel.app/api?username=oprinmarius&show_icons=true&theme=architect) 
+![oprinmarius's GitHub stats](https://github-readme-stats.vercel.app/api?username=oprinmarius&show_icons=true&count_private=true&include_all_commits=true&theme=architect) 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=oprinmarius&theme=architect&count_private=true&layout=compact)
 
 ![](https://visitor-badge.laobi.icu/badge?page_id=oprinmarius)
