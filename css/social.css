@@ -1,0 +1,44 @@
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    background: #444;
+    margin-top: 5rem;
+}
+
+.glassIco {
+  --width: 100px;
+  width: var(--width);
+  height: var(--width);
+  color: #fff;
+  font-size: 30px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  margin: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glassIco, .glassIco * {
+  box-sizing: border-box;
+  transition: 200ms;
+}
+
+.glassIco:hover {
+  transform: translateY(-20px);
+  background-color: #ffffff;
+  color: #444;
+}
+
+
+

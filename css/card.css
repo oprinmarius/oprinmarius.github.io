@@ -1,0 +1,107 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    z-index: 1;
+    gap: 20px;
+    padding: 20px;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.container .card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent background */
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    /* This creates the frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+
+    max-width: 50%;
+    min-height: 5.398cm;
+    min-width: 8.56cm;
+    height: 100%;
+    width: auto; /* Or a different percentage based on your design */
+    max-width: 400px; /* Optional: to prevent the card from getting too wide on large screens */
+    margin: 10px auto; /* Center the card */
+    padding: 20px;
+    text-align: right; /* Center text horizontally */
+}
+
+.container .card .content {
+    padding: 20px;
+}
+
+.container .card .content h2 {
+    position: relative;
+    left: 0em;
+    top: -1em;
+    font-size: 1.7em;
+    color: #fff;
+    pointer-events: none;
+    padding: 20px;
+    text-align: center;
+}
+
+.container .card .content h3 {
+    font-size: 1em;
+    color: #fff;
+    z-index: 1;
+    padding: 10px;
+    top: -2em;
+    position: relative
+}
+
+.container .card .content p {
+    font-size: 0.7em;
+    color: #fff;
+    position: relative;
+    top: -3em;
+    padding: 2px;
+}
+
+.container .card .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background-attachment: #fff;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.card-link {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits text color */
+    display: inline-block; /* To maintain block level properties */
+}
+
+.card img {
+    width: 113%; /* Makes the image responsive */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 5px; /* Optional: Matches the card's border-radius */
+    left: 0;
+    bottom: 0;
+    display: block;
+    position: absolute;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 10px;
+    margin: auto;
+}

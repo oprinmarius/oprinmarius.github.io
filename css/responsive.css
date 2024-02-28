@@ -1,0 +1,80 @@
+@media (max-width: 56.25em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media (min-width: 112.5em) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Style for tablets */
+@media (max-width: 768px) {
+    .card,.box {
+        max-width: 350px; 
+        padding: 15px;
+
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .stats img{
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .container1{
+        width: 350px;
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    .about{
+        max-width: 100%;
+    }
+  }
+
+
+/* Style for mobile devices */
+@media (max-width: 480px) {
+    .card,.box {
+        max-width: 100%; 
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .stats img{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .stats img{
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .container1 {
+        padding: 0 30px;
+    }
+    
+    .container1 .card1 .face {
+        width: 250px;
+        height: 180px;
+    }
+
+    .container .card {
+        min-width: 6.56cm;
+    }
+}
