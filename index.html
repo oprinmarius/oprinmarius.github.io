@@ -447,6 +447,12 @@
       height: 18px;
     }
 
+    .tech-tag img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+
     /* Connect section */
     #connect {
       text-align: center;
@@ -545,7 +551,7 @@
   <nav>
     <div class="nav-inner">
       <a href="#hero" class="logo">
-        <img src="img/logo.png" alt="Marius Oprin">
+        <span style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#0086FF,#D62293);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.9rem;color:white;">MO</span>
         <span>Marius Oprin</span>
       </a>
       <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
@@ -646,21 +652,21 @@
       <p class="section-subtitle">Deep expertise across the CNCF landscape.</p>
     </div>
     <div class="tech-grid reveal">
-      <span class="tech-tag">⎈ Kubernetes</span>
-      <span class="tech-tag">🔄 ArgoCD</span>
-      <span class="tech-tag">🔗 Istio</span>
-      <span class="tech-tag">🐝 Cilium</span>
-      <span class="tech-tag">⛵ Helm</span>
-      <span class="tech-tag">🏗️ Terraform</span>
-      <span class="tech-tag">🔐 Vault</span>
-      <span class="tech-tag">🛡️ Keycloak</span>
-      <span class="tech-tag">📊 Grafana</span>
-      <span class="tech-tag">🤖 KubeVirt</span>
-      <span class="tech-tag">🔧 Cluster API</span>
-      <span class="tech-tag">🔥 Tinkerbell</span>
-      <span class="tech-tag">📦 Kargo</span>
-      <span class="tech-tag">🏭 Harbor</span>
-      <span class="tech-tag">💾 Rook-Ceph</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/kubernetes/icon/color/kubernetes-icon-color.svg" alt="Kubernetes" width="20" height="20" style="border-radius:4px;"> Kubernetes</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/argo/icon/color/argo-icon-color.svg" alt="ArgoCD" width="20" height="20" style="border-radius:4px;"> ArgoCD</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/istio/icon/color/istio-icon-color.svg" alt="Istio" width="20" height="20" style="border-radius:4px;"> Istio</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/cilium/icon/color/cilium-icon-color.svg" alt="Cilium" width="20" height="20" style="border-radius:4px;"> Cilium</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/helm/icon/color/helm-icon-color.svg" alt="Helm" width="20" height="20" style="border-radius:4px;"> Helm</span>
+      <span class="tech-tag"><img src="https://www.svgrepo.com/show/376353/terraform.svg" alt="Terraform" width="20" height="20" style="border-radius:4px;"> Terraform</span>
+      <span class="tech-tag"><img src="https://www.svgrepo.com/show/448270/vault.svg" alt="Vault" width="20" height="20" style="border-radius:4px;"> Vault</span>
+      <span class="tech-tag"><img src="https://www.keycloak.org/resources/images/icon.svg" alt="Keycloak" width="20" height="20" style="border-radius:4px;"> Keycloak</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/grafana/icon/color/grafana-icon-color.svg" alt="Grafana" width="20" height="20" style="border-radius:4px;"> Grafana</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/kubevirt/icon/color/kubevirt-icon-color.svg" alt="KubeVirt" width="20" height="20" style="border-radius:4px;"> KubeVirt</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/kubernetes/icon/color/kubernetes-icon-color.svg" alt="Cluster API" width="20" height="20" style="border-radius:4px;"> Cluster API</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/tinkerbell/icon/color/tinkerbell-icon-color.svg" alt="Tinkerbell" width="20" height="20" style="border-radius:4px;"> Tinkerbell</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/argo/icon/color/argo-icon-color.svg" alt="Kargo" width="20" height="20" style="border-radius:4px;"> Kargo</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/harbor/icon/color/harbor-icon-color.svg" alt="Harbor" width="20" height="20" style="border-radius:4px;"> Harbor</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/rook/icon/color/rook-icon-color.svg" alt="Rook-Ceph" width="20" height="20" style="border-radius:4px;"> Rook-Ceph</span>
     </div>
   </section>
 
