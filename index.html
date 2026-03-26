@@ -1,140 +1,756 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK0S2C01J2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-NK0S2C01J2');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oprin Marius Cristian</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marius Oprin — Founder & CTO, Cloud Native Solutions</title>
+  <meta name="description" content="I build and operate Kubernetes platforms. From bare metal and every major cloud provider to AI agents. Founder & CTO at Cloud Native Solutions.">
+  <meta name="author" content="Marius Oprin">
+  <meta property="og:title" content="Marius Oprin — Founder & CTO">
+  <meta property="og:description" content="I build and operate Kubernetes platforms. From bare metal and every major cloud provider to AI agents.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://marius.oprin.ro">
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK0S2C01J2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NK0S2C01J2');
+  </script>
+  <style>
+    :root {
+      --blue: #0086FF;
+      --turquoise: #93EAFF;
+      --pink: #D62293;
+      --black: #000000;
+      --stone: #E5E5E5;
+      --dark-bg: #0a0a0f;
+      --dark-surface: #12121a;
+      --dark-border: #1e1e2e;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--dark-bg);
+      color: var(--stone);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Subtle animated gradient background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(0, 134, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(214, 34, 147, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 80%, rgba(147, 234, 255, 0.04) 0%, transparent 50%);
+      z-index: -1;
+      animation: bgShift 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes bgShift {
+      0% { opacity: 1; }
+      50% { opacity: 0.7; }
+      100% { opacity: 1; }
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
+      backdrop-filter: blur(20px);
+      background: rgba(10, 10, 15, 0.8);
+      border-bottom: 1px solid var(--dark-border);
+      transition: all 0.3s ease;
+    }
+
+    nav .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    nav .logo img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav .nav-links a {
+      color: rgba(229, 229, 229, 0.7);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav .nav-links a:hover { color: var(--blue); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--stone);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* Sections */
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 6rem 2rem;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--blue);
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: rgba(229, 229, 229, 0.6);
+      max-width: 600px;
+      margin-bottom: 3rem;
+    }
+
+    /* Hero */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 6rem;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background: rgba(0, 134, 255, 0.1);
+      border: 1px solid rgba(0, 134, 255, 0.2);
+      border-radius: 100px;
+      font-size: 0.85rem;
+      color: var(--turquoise);
+      margin-bottom: 2rem;
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .hero-badge .dot {
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .hero-name {
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      font-weight: 900;
+      color: white;
+      line-height: 1.05;
+      margin-bottom: 1rem;
+      animation: fadeInUp 0.6s ease-out 0.1s both;
+    }
+
+    .hero-name .gradient {
+      background: linear-gradient(135deg, var(--blue), var(--turquoise));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: rgba(229, 229, 229, 0.8);
+      margin-bottom: 0.75rem;
+      animation: fadeInUp 0.6s ease-out 0.2s both;
+    }
+
+    .hero-tagline {
+      font-size: 1.15rem;
+      color: rgba(229, 229, 229, 0.5);
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      animation: fadeInUp 0.6s ease-out 0.3s both;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.6s ease-out 0.4s both;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      background: var(--blue);
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: #0070d6;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 134, 255, 0.3);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      background: transparent;
+      color: var(--stone);
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 1px solid var(--dark-border);
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(229, 229, 229, 0.3);
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Cards grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--dark-surface);
+      border: 1px solid var(--dark-border);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--pink));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .card:hover {
+      border-color: rgba(0, 134, 255, 0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .card:hover::before { opacity: 1; }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      font-size: 1.5rem;
+    }
+
+    .card-icon.blue { background: rgba(0, 134, 255, 0.15); color: var(--blue); }
+    .card-icon.pink { background: rgba(214, 34, 147, 0.15); color: var(--pink); }
+    .card-icon.turquoise { background: rgba(147, 234, 255, 0.15); color: var(--turquoise); }
+
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      color: rgba(229, 229, 229, 0.6);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .card-link {
+      color: var(--blue);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: gap 0.2s;
+    }
+
+    .card-link:hover { gap: 0.6rem; }
+
+    /* Featured Work */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .work-card {
+      background: var(--dark-surface);
+      border: 1px solid var(--dark-border);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .work-card:hover {
+      border-color: rgba(214, 34, 147, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .work-card .stat {
+      font-size: 2.5rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--pink), var(--blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .work-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0.75rem;
+    }
+
+    .work-card p {
+      color: rgba(229, 229, 229, 0.6);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* Tech Stack */
+    .tech-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .tech-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.25rem;
+      background: var(--dark-surface);
+      border: 1px solid var(--dark-border);
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: rgba(229, 229, 229, 0.8);
+      transition: all 0.2s;
+    }
+
+    .tech-tag:hover {
+      border-color: var(--blue);
+      color: white;
+      background: rgba(0, 134, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .tech-tag svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .tech-tag img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+
+    /* Connect section */
+    #connect {
+      text-align: center;
+    }
+
+    #connect .section-subtitle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .connect-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .connect-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: var(--dark-surface);
+      border: 1px solid var(--dark-border);
+      color: rgba(229, 229, 229, 0.7);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .connect-link:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0, 134, 255, 0.15);
+    }
+
+    .connect-link svg { width: 24px; height: 24px; }
+
+    .connect-ctas {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--dark-border);
+      color: rgba(229, 229, 229, 0.4);
+      font-size: 0.85rem;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      section { padding: 4rem 1.25rem; }
+      .section-title { font-size: 2rem; }
+      nav .nav-links { display: none; }
+      nav .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        background: rgba(10, 10, 15, 0.95);
+        backdrop-filter: blur(20px);
+        padding: 1.5rem 2rem;
+        gap: 1rem;
+        border-bottom: 1px solid var(--dark-border);
+      }
+      .hamburger { display: flex; }
+      .cards-grid, .work-grid { grid-template-columns: 1fr; }
+      .hero-ctas { flex-direction: column; }
+      .hero-ctas a { text-align: center; justify-content: center; }
+    }
+  </style>
 </head>
 <body>
-    <div class="area" >
-        <ul class="circles">
-            
-    <main>
-       
-        <div class="container">
-            <div class="about" data-aos="fade-right">
-                <div class="box block">
-                    <p>Hi there 👋 </p>
-                    <p> I’m a DevOps Engineer with experience spanning across multiple cloud platforms e.g AWS, Azure, GCP, Oracle Cloud, Digital Ocean etc.</p>
-                    <p class="box-footer">Click on the business card to add me to your contacts</p>
-                </div>
-            </div>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#hero" class="logo">
+        <img src="img/logo.png" alt="Cloud Native Solutions" style="height:32px;width:auto;">
+        <span>Marius Oprin</span>
+      </a>
+      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">What I Do</a></li>
+        <li><a href="#work">Featured Work</a></li>
+        <li><a href="#stack">Tech Stack</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+    </div>
+  </nav>
 
-            <a href="assets/marius_oprin.vcf" download="marius_oprin.vcf" class="card-link" data-aos="fade-left">
-            <div class="card">
-                <div class="content">
-                    <h2>Oprin Marius Cristian</h2>
-                    <h3>Founder, CTO</h3>
-                    <p> Phone: (+40) 744 433 074 </p>
-                    <p>Email: marius@oprin.ro</p>
-                    <p>Web: https://marius.oprin.ro</p>
-                </div>
-                <img src="img/logo.png">    
-            </div>
-            </a>
-        </div>
-
-
-        <div class="hovercards">
-          <div class="container1">
-            <a href="mailto:marius@oprin.ro" target="_blank" class="card1">
-              <div class="face face1">
-                <div class="content">
-                  <i class="fa-solid fa-envelope"></i>
-                  <p>Reach out</p>
-                </div>
-              </div>
-            </a>
-        
-            <a href="assets/marius_oprin_resume.pdf" download="marius_oprin_resume.pdf" class="card1">
-              <div class="face face1">
-                <div class="content">
-                  <i class="fa-solid fa-file"></i>
-                  <p>Download my Resume</p>
-                </div>
-              </div>
-            </a>
-        
-            <a href="https://calendly.com/oprinmarius" target="_blank" class="card1">
-              <div class="face face1">
-                <div class="content">
-                  <i class="fa fa-calendar"></i>
-                  <p>Schedule a meeting</p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="gh-stats">
-
-          <div class="stats">
-            <img height="300px" max-width="100%" src="https://github-readme-stats.vercel.app/api?username=oprinmarius&amp;show_icons=true&amp;count_private=true&amp;include_all_commits=true&amp;theme=transparent&amp;rank_icon=github"
-                alt="oprinmarius's GitHub stats">
-              </div>
-            
-          <div class="stats">
-          <img height="300px" max-width=100% src="https://github-readme-stats.vercel.app/api/top-langs/?username=oprinmarius&amp;theme=transparent&amp;count_private=true&amp;layout=donut" alt="Top Langs">
-            </div>
-
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Timișoara, Romania
       </div>
-
-
-        <div class="social">
-          <a class="glassIco" href="https://github.com/oprinmarius"><i class="fab fa-github"></i></a>
-          <a class="glassIco" href="https://linkedin.com/in/oprinmarius"><i class="fab fa-linkedin-in"></i></a>
-          <a class="glassIco" href="https://x.com/oprinmarius"><i class="fab fa-twitter"></i></a>
-          <a class="glassIco" href="https://facebook.com/oprinmarius"><i class="fab fa-facebook-f"></i></a>
+      <h1 class="hero-name">Marius<br><span class="gradient">Oprin</span></h1>
+      <p class="hero-subtitle">Founder & CTO — Cloud Native Solutions</p>
+      <p class="hero-tagline">I build and operate Kubernetes platforms. From bare metal and every major cloud provider to AI agents.</p>
+      <div class="hero-ctas">
+        <a href="https://calendly.com/oprinmarius" target="_blank" rel="noopener" class="btn-primary">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          Let's Talk
+        </a>
+        <a href="assets/marius_oprin_resume.pdf" target="_blank" class="btn-secondary">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          Download Resume
+        </a>
       </div>
+    </div>
+  </section>
 
-        </main>
+  <!-- What I Do -->
+  <section id="about">
+    <div class="reveal">
+      <span class="section-label">What I Do</span>
+      <h2 class="section-title">Building the cloud native future</h2>
+      <p class="section-subtitle">From consultancy to product — shipping infrastructure that scales.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card reveal">
+        <div style="height:60px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;"><img src="img/cns-logo.png" alt="CNS" style="max-width:180px;max-height:60px;object-fit:contain;"></div>
+        <h3>Cloud Native Solutions</h3>
+        <p>DevOps-as-a-Service consultancy. We architect, operate, and secure Kubernetes platforms for startups and enterprises.</p>
+        <a href="https://cloudnativesolutions.ro" target="_blank" rel="noopener" class="card-link">cloudnativesolutions.ro <span>→</span></a>
+      </div>
+      <div class="card reveal">
+        <div style="height:60px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;"><img src="img/o8s-logo.png" alt="O8s" style="max-width:200px;max-height:55px;object-fit:contain;"></div>
+        <h3>O8s Cloud</h3>
+        <p>Infrastructure automation platform. Kubernetes cluster lifecycle management at scale.</p>
+        <a href="https://o8s.ai" target="_blank" rel="noopener" class="card-link">o8s.ai <span>→</span></a>
+      </div>
+      <div class="card reveal">
+        <div style="height:60px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/kubernetes/icon/color/kubernetes-icon-color.svg" alt="K8s" style="width:56px;height:56px;"></div>
+        <h3>Kubernetes Services</h3>
+        <p>Managed Kubernetes services. We deploy, operate, and maintain production clusters on any cloud or bare metal.</p>
+        <a href="https://k8s.services" target="_blank" rel="noopener" class="card-link">k8s.services <span>→</span></a>
+      </div>
+      <div class="card reveal">
+        <div style="height:60px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;"><img src="https://raw.githubusercontent.com/cncf/artwork/main/other/cncf/icon/color/cncf-icon-color.svg" alt="CNCF" style="width:56px;height:56px;"></div>
+        <h3>Open Source</h3>
+        <p>Kubernetes org member and contributor to CNCF projects: Kubernetes, Tinkerbell, Cluster API, and more. Giving back to the ecosystem that powers everything.</p>
+        <a href="https://github.com/oprinmarius" target="_blank" rel="noopener" class="card-link">github.com/oprinmarius <span>→</span></a>
+      </div>
+    </div>
+  </section>
 
+  <!-- Featured Work -->
+  <section id="work">
+    <div class="reveal">
+      <span class="section-label">Featured Work</span>
+      <h2 class="section-title">Things I've built</h2>
+      <p class="section-subtitle">Real infrastructure, real results.</p>
+    </div>
+    <div class="work-grid">
+      <div class="work-card reveal">
+        <div class="stat">Private<br>Cloud</div>
+        <h3>Bare Metal Private Cloud</h3>
+        <p>Enterprise-grade private cloud on bare metal — Kubernetes, Istio, Rook-Ceph, KubeVirt. Full CNCF stack, fully self-hosted, no vendor lock-in.</p>
+      </div>
+      <div class="work-card reveal">
+        <div class="stat">18 AI<br>agents</div>
+        <h3>AI Agent Platform</h3>
+        <p>LLM gateway, DGX Spark inference, Langfuse observability — 18 AI agents running entirely on Kubernetes.</p>
+      </div>
+      <div class="work-card reveal">
+        <div class="stat">Pure<br>GitOps</div>
+        <h3>GitOps at Scale</h3>
+        <p>Every application, every config change — managed through Git. ArgoCD self-heals drift, Kargo promotes across environments. Teams own their values, platform owns the lifecycle.</p>
+      </div>
+    </div>
+  </section>
 
-        {{/*  dont remove this as this are the circles in the background. the style you can find on custom-background.css  */}}
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-</ul>
-</div>
+  <!-- Tech Stack -->
+  <section id="stack">
+    <div class="reveal">
+      <span class="section-label">Tech Stack</span>
+      <h2 class="section-title">Tools of the trade</h2>
+      <p class="section-subtitle">Deep expertise across the CNCF landscape.</p>
+    </div>
+    <div class="tech-grid reveal">
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/kubernetes/icon/color/kubernetes-icon-color.svg" alt="Kubernetes" width="20" height="20" style="border-radius:4px;"> Kubernetes</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/argo/icon/color/argo-icon-color.svg" alt="ArgoCD" width="20" height="20" style="border-radius:4px;"> ArgoCD</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/istio/icon/color/istio-icon-color.svg" alt="Istio" width="20" height="20" style="border-radius:4px;"> Istio</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cilium/cilium/main/Documentation/images/logo-solo.svg" alt="Cilium" width="20" height="20" style="border-radius:4px;"> Cilium</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/helm/icon/color/helm-icon-color.svg" alt="Helm" width="20" height="20" style="border-radius:4px;"> Helm</span>
+      <span class="tech-tag"><img src="https://www.svgrepo.com/show/376353/terraform.svg" alt="Terraform" width="20" height="20" style="border-radius:4px;"> Terraform</span>
+      <span class="tech-tag"><img src="https://icon.icepanel.io/Technology/svg/HashiCorp-Vault.svg" alt="Vault" width="20" height="20" style="border-radius:4px;"> Vault</span>
+      <span class="tech-tag"><img src="https://www.keycloak.org/resources/images/icon.svg" alt="Keycloak" width="20" height="20" style="border-radius:4px;"> Keycloak</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/grafana/grafana/main/public/img/grafana_icon.svg" alt="Grafana" width="20" height="20" style="border-radius:4px;"> Grafana</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/kubevirt/icon/color/kubevirt-icon-color.svg" alt="KubeVirt" width="20" height="20" style="border-radius:4px;"> KubeVirt</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/kubernetes/icon/color/kubernetes-icon-color.svg" alt="Cluster API" width="20" height="20" style="border-radius:4px;"> Cluster API</span>
+      <span class="tech-tag"><img src="https://avatars.githubusercontent.com/u/60022928?s=200&v=4" alt="Tinkerbell" width="20" height="20" style="border-radius:4px;"> Tinkerbell</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/argo/icon/color/argo-icon-color.svg" alt="Kargo" width="20" height="20" style="border-radius:4px;"> Kargo</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/harbor/icon/color/harbor-icon-color.svg" alt="Harbor" width="20" height="20" style="border-radius:4px;"> Harbor</span>
+      <span class="tech-tag"><img src="https://raw.githubusercontent.com/cncf/artwork/main/projects/rook/icon/color/rook-icon-color.svg" alt="Rook-Ceph" width="20" height="20" style="border-radius:4px;"> Rook-Ceph</span>
+    </div>
+  </section>
 
+  <!-- Connect -->
+  <section id="connect">
+    <div class="reveal">
+      <span class="section-label">Connect</span>
+      <h2 class="section-title">Let's work together</h2>
+      <p class="section-subtitle">Building something on Kubernetes? Need DevOps expertise? Let's talk.</p>
+    </div>
+    <div class="connect-links reveal">
+      <!-- GitHub -->
+      <a href="https://github.com/oprinmarius" target="_blank" rel="noopener" class="connect-link" title="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+      </a>
+      <!-- LinkedIn -->
+      <a href="https://linkedin.com/in/oprinmarius" target="_blank" rel="noopener" class="connect-link" title="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <!-- X/Twitter -->
+      <a href="https://x.com/oprinmarius" target="_blank" rel="noopener" class="connect-link" title="X / Twitter">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <!-- Email -->
+      <a href="mailto:marius@oprin.ro" class="connect-link" title="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      </a>
+      <!-- Phone -->
+      <a href="tel:+40744433074" class="connect-link" title="Phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      </a>
+    </div>
+    <div class="connect-ctas reveal">
+      <a href="https://calendly.com/oprinmarius" target="_blank" rel="noopener" class="btn-primary">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        Schedule a Call
+      </a>
+      <a href="assets/marius_oprin.vcf" download class="btn-secondary">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+        Download vCard
+      </a>
+    </div>
+  </section>
 
-   
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Marius Oprin. Built with ☕ and Kubernetes.</p>
+  </footer>
 
-    <script src="tilt.js"></script>
-        <script src="https://kit.fontawesome.com/ba7db18963.js" crossorigin="anonymous"></script>
-        <script>
-            VanillaTilt.init(document.querySelectorAll(".card"), {
-                max: 25,
-                speed: 400,
-                glare: true,
-                "max-glare": 1
-            });
-        </script>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            AOS.init({
-              duration: 800,
-            });
-          });
-        </script>
+  <!-- Scroll reveal & mobile menu close -->
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('open');
+      });
+    });
+
+    // Navbar shrink on scroll
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 50) {
+        nav.style.padding = '0.5rem 2rem';
+      } else {
+        nav.style.padding = '1rem 2rem';
+      }
+    });
+  </script>
 </body>
 </html>
